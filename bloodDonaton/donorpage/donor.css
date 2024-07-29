@@ -1,0 +1,504 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+:root {
+    /* fonts */
+    --font-abhaya-libre-semibold: "Abhaya Libre SemiBold";
+    --font-abhaya-libre-extrabold: "Abhaya Libre ExtraBold";
+    --font-abhaya-libre-medium: "Abhaya Libre Medium";
+    --text: Inter;
+    --font-open-sans: "Open Sans";
+  
+    /* font sizes */
+    --font-size-sm: 14px;
+    --font-size-base: 16px;
+    --font-size-26xl: 45px;
+    --font-size-3xs: 10px;
+    --font-size-xs: 12px;
+    --font-size-xl: 20px;
+    --text-size: 24px;
+    --font-size-lg: 18px;
+  
+    /* Colors */
+    --colors-light-ffffff: #fff;
+    --primary: #060640;
+    --paragraph: #9090a7;
+    --color-lightslategray-100: #828297;
+    --color-aliceblue-100: #ecf9ff;
+    --secondary: #00e5cc;
+    --color-turquoise-100: #01e4cb;
+    --color-black: #000;
+    --color-gray-100: #fbfeff;
+    --color-gray-200: rgba(255, 255, 255, 0.5);
+    --color-gray-300: rgba(255, 255, 255, 0.2);
+    --color-mintcream: #edf6f3;
+    --color-dimgray: #69696f;
+    --color-red: #ff0000;
+  
+    /* Border radiuses */
+    --br-base: 16px;
+    --br-7xs: 6px;
+    --br-3xs: 10px;
+    --br-sm: 14px;
+    --br-5xs: 8px;
+    --br-11xl: 30px;
+    --br-6xs-5: 6.5px;
+    --br-17xl-5: 36.5px;
+    --br-18xl: 37px;
+    --br-6xs: 7px;
+    --br-xs: 12px;
+    --br-2xs: 11px;
+  
+    /* Effects */
+    --light-shadow: 0px 4px 30px rgba(6, 6, 64, 0.1);
+}
+
+.logo-first-alph {
+    display: flex;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    font-size: 30px;
+    line-height: 30px;
+    font-family: var(--font-abhaya-libre-medium);
+    color: var(--secondary);
+  }
+
+  .logo-after-alph{
+    color: var(--primary);
+  }
+.navbar {
+    position: relative;
+    top: 0px;
+    border-radius: var(--br-3xs);
+    background-color: rgba(216, 224, 228, 0.8);
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    font-family: var(--font-abhaya-libre-semibold);
+    cursor: pointer;
+  }
+
+.hoverText:hover{
+  color: var(--secondary);
+}
+
+.btn:hover .login-btn{
+  color: var(--secondary);
+}
+
+  .nav-content{
+    position: absolute;
+    top: 38px;
+    left: 407px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 25px;
+    color: var(--color-lightslategray-100);
+  }
+
+  a{
+    text-decoration: none; 
+    color:  var(--color-lightslategray-100);
+  }
+
+
+  .btn {
+    position: absolute;
+    top: 22px;
+    left: 1020px;
+    border-radius: var(--br-7xs);
+    background-color: var(--primary);
+    width: 120px;
+    height: 55px;
+    overflow: hidden;
+    text-align: center;
+  }
+
+.login-btn{
+    position: absolute;
+    top: 20px;
+    left: 42px;
+    line-height: 15px;
+    color: white;
+}
+
+.imgText{
+    margin: auto;
+    position: relative;
+    font-family: var(--text);
+    font-weight: 800;
+    font-size: 62px;
+    color: #ecf9ff;
+    width: 85%;
+}
+
+/* 
+.imgSlider{
+    margin-top: 7.3%;
+    width: 100%;
+    height: 84.7vh;
+    background-image: url('donorpage-images/bg1.jpg');
+    opacity: 0.84;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    animation: changeImage 20s linear infinite;
+}
+    @keyframes changeImage {
+        0%{
+            background-image: url('donorpage-images/bg1.jpg');
+            #imgText1{
+                opacity: 1;
+            }
+            #imgText2{
+                opacity: 0;
+            }
+            #imgText3{
+                opacity: 0;
+            }
+        }
+        33%{
+            background-image: url('donorpage-images/bg2.jpg');
+            
+        }
+        66%{
+            background-image: url('donorpage-images/bg3.jpeg');
+
+        }
+        100%{
+            background-image: url('donorpage-images/bg1.jpg');
+
+        }
+    }
+    
+
+    
+#imgText1 {
+    animation: fadeInOut 20s linear infinite;
+}
+
+#imgText2 {
+    animation: fadeInOut 20s linear infinite;
+}
+
+#imgText3 {
+    animation: fadeInOut 20s linear infinite;
+}
+
+ */
+ .imgSlider {
+    width: 100%;
+    height: 84.7vh;
+    background-image: url('donorpage-images/bg1.jpg');
+    opacity: 0.84;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    animation: changeImage 12s linear infinite;
+}
+
+#imgText1,
+#imgText2,
+#imgText3 {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#imgText1 {
+    animation: fadeInOut 12s linear infinite, fadeInOutText1 12s linear infinite;
+}
+
+#imgText2 {
+    animation: fadeInOut 12s linear infinite, fadeInOutText2 12s linear infinite;
+}
+
+#imgText3 {
+    animation: fadeInOut 12s linear infinite, fadeInOutText3 12s linear infinite;
+}
+
+@keyframes changeImage {
+    0%, 33.33% {
+        background-image: url('donorpage-images/bg1.jpg');
+    }
+    33.34%, 66.66% {
+        background-image: url('donorpage-images/bg2.jpg');
+    }
+    66.67%, 100% {
+        background-image: url('donorpage-images/bg3.jpeg');
+    }
+}
+
+@keyframes fadeInOut {
+    8%, 100% {
+        opacity: 1;
+    }
+    
+    25%, 75% {
+        opacity: 0;
+    }
+
+}
+
+@keyframes fadeInOutText1 {
+    8%, 31% {
+        opacity: 1;
+    }
+    33.34%, 66.66% {
+        opacity: 0;
+    }
+    66.67%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInOutText2 {
+    0%, 33.33% {
+        opacity: 0;
+    }
+    39%, 63% {
+        opacity: 1;
+    }
+    66.67%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInOutText3 {
+    0%, 66.66% {
+        opacity: 0;
+    }
+    70%, 94% {
+        opacity: 1;
+    }
+}
+
+
+.donation-initiative-section{
+    padding-left: 3rem;
+    background-color: rgba(202, 107, 118, 0.5);
+    width: 100%;
+    height: 100vh;
+}
+.donation-heading{
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    font-family: var(--text);
+    color: var(--primary);
+}
+.donation-sub-heading{
+    padding-top: 0.5em;
+    padding-left: 1em;
+    font-family: Abhaya Libre ExtraBold;
+    color: var(--Paragraph, #686363);
+}
+.ellipse{
+    position: relative;
+    top: 1.7rem;
+    left: 12rem;
+}
+.donation-steps-info{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.info-cards{
+    height: 100%;
+    width: 40%;
+
+}
+
+.card{
+    background-color: rgba(254, 235, 235, 1);
+    border-radius: 7px;
+    height: 30%;
+    margin-top: 1rem;
+    padding: 2rem;
+}
+.card-heading{
+    position: relative;
+    left: -1rem;
+    top: -0.5rem;
+    font-size: 20px
+}
+.info-list, .grey-text{
+    color: rgba(105, 105, 111, 1);
+}
+
+.steps-heading{
+    position: relative;
+    top: -1.32em;
+    left: -2rem;
+    background-color: rgba(234, 217, 217, 1);
+    width: 17.8em;
+    height: 15%;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 7px;
+}
+.donation-steps{
+    height: 75%;
+    width: 45.2%;
+    margin-top: 1rem;
+    background-color: white;
+    border-radius: 7px;
+    padding: 2rem;
+}
+
+.donation-btn {
+    position: relative;
+    top: -6em;
+    right: -62.9em;
+    border-radius: var(--br-7xs);
+    background-color: var(--primary);
+    width: 120px;
+    height: 55px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+  }
+
+.donate-btn{
+    position: relative;
+    top: 20px;
+    left: -0.1em;
+    line-height: 15px;
+    color: white;
+}
+
+.registration-form{
+    width: 100%;
+    height: 800px;
+    padding-left: 3rem;
+    background-color: rgba(255, 223, 223, 0.94);
+}
+
+.donor-form{
+    position: relative;
+    top: 1rem;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    width: 80%;
+}
+.donor-form-heading{
+    width: 43.4em;
+    height: 4rem;
+    text-align: start;
+    padding-left: 2em;
+    padding-top: 15px;
+    font-family: var(--text);
+    color: var(--primary);
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 53em;
+    margin-left: 4rem;
+    
+}
+
+textarea {
+    resize: none; /* Prevent textarea from being resized by the user */
+}
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    font-family: Abhaya Libre ExtraBold;
+    font-size: 0.8em;
+    width: 100%;
+}
+
+textarea,
+input[type="text"][name="hiv_diagnosed"],
+input[type="text"][name="cancer_treatment"],
+input[type="text"][name="other_info"] {
+    grid-column: span 2;
+}
+
+button {
+    margin-top: 30rem;
+    margin-left: -9rem;
+    padding: 10px;
+    position: relative;
+    font-family: Abhaya Libre ExtraBold;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #606060;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    color: var(--secondary);
+}
+
+.story-feedback-section{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 245, 245);
+    padding-left: 3rem;
+}
+
+.shift-top{
+    top: 1.3rem;
+    left: 13.9rem;
+}
+
+.feedback-cards{
+    margin: auto;
+    margin-top: 3rem;
+    width: 90%;
+    height: 80%;
+}
+
+.feedback-card1{
+    font-size: 1em;
+    width: 90%;
+}
+
+#story{
+    position: relative;
+    top: -1.7em;
+    left: -2.4em;
+    width: 65.9rem;
+    height: 12em;
+}
+#feedback{
+    position: relative;
+    top: -1.7em;
+    left: -2.4em;
+    width: 65.9rem;
+    height: 12em;
+}
+.shift-down{
+    position: relative;
+    top: -4.5em;
+}

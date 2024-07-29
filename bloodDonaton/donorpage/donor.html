@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="donor.css">
+
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Abhaya Libre ExtraBold:wght@400&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Abhaya Libre SemiBold:wght@400&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Abhaya Libre Medium:wght@400&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Open Sans:wght@400&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap"
+  />
+    <title>Donor Page</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- hero-section -->
+        <div class="hero-section" id="home">
+
+                        <!-- nav bar -->
+                        <nav class="navbar">
+
+                            <div class="nav-content ">
+                              <a href="#home"><div class="home hoverText">Home</div></a>
+                              <a href="#donation-initiative-section"><div class="about hoverText">Steps Of Donation</div></a>
+                              <a href="#registration-form"><div class="services hoverText">Register Yourself</div></a>
+                              <a href="#story-feedback-section"><div class="reviews hoverText">Feedback Corner</div></a>
+
+                            </div>
+                            <div class="logo-first-alph">
+                              <p>G</p>
+                              <p class="logo-after-alph">et Blood</p>
+                            </div>
+                            <div class="btn">
+                              <div class="login-btn hoverText">Logout</div>
+                            </div>
+          
+                      </nav>
+
+                      <!-- image-slider -->
+                        <div class="imgSlider">
+
+                            <div class="imgText" id="imgText1">
+                                Every drop donated is a lifeline gained,  be the hero in someone's story, donate blood today.
+                            </div>
+                            <div class="imgText" id="imgText2">
+                                Don't wait for a tragedy to be a lifesaver. Your blood can be the difference between despair and a second chance.
+                            </div> 
+                            <div class="imgText" id="imgText3">
+                                In every heartbeat, there's a chance to save a life. Be the rhythm of hope, become a blood donor.
+                            </div>
+                        </div>
+        </div>
+
+        <!-- donation initiative -->
+        <div class="donation-initiative-section" id="donation-initiative-section">
+            <img class="ellipse" src="donorpage-images/Ellipse 11.svg" alt="" height="25px" width="56px" >
+            <h1 class="donation-heading">Welcome to our Blood Donation Initiative</h1>
+            <h3 class="donation-sub-heading"> Your decision to donate blood can save lives and make a significant impact on the well-being of others.</h3>
+
+            <div class="donation-steps-info">
+                <div class="info-cards">
+                    <!-- card 1 -->
+                    <div class="card">
+                        <h2 class="card-heading">Importance of Filling the Form:</h2>
+                        <ul class="info-list">
+                            <li>Crucial for a smooth safe donation process.</li>
+                            <li>Helps maintain accurate records.</li>
+                            <li>Enables contact when needed.</li>
+                            <li>Ensures blood suitability for those in need.</li>
+                        </ul>
+                    </div>
+                    <!-- card 2 -->
+                    <div class="card">
+                        <h2 class="card-heading">How We Reach Out:</h2>
+                        <ul class="info-list">
+                            <li>Respects your time and privacy.</li>
+                            <li>Contacts only for donation-related matters.</li>
+                            <li>Information is securely stored.</li>
+                            <li>Used solely for blood donation initiatives.</li>
+                        </ul>
+                    </div>
+                    <!-- card 3 -->
+                    <div class="card">
+                        <h2 class="card-heading">Your Donation's Impact:</h2>
+                        <ul class="info-list">
+                            <li>Every drop counts.</li>
+                            <li>Helps save multiple lives.</li>
+                            <li>Directly supports critical medical interventions.</li>
+                            <li>Generosity transforms the lives of millions.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- steps of donation -->
+                <div class="donation-steps">
+                    <h2 class="steps-heading">Steps of Blood Donation</h2>
+                    <ul class="steps-list">
+                        <li>Registration: <br> <span class="grey-text">Complete the form below with your details.</span> </li>
+                        <br>
+                        <li>Health Check: <br> <span class="grey-text">  A brief medical examination to ensure eligibility.</span> </li>
+                        <br>
+                        <li>Donation: <br> <span class="grey-text">The actual blood donation takes a few minutes.</span></li>
+                        <br>
+                        <li>Refreshment: <br><span class="grey-text">Enjoy a snack and refreshments donation.</span></li>
+                        <br>
+                        <li>Impact: <br><span class="grey-text">Your donation will be processed distributed to hospitals in need.</span></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            
+            <a href="#registration-form"><div class="donation-btn">
+                <div class="donate-btn hoverText">Donate Now</div>
+              </div>
+            </a> 
+        </div>
+
+
+        <!-- registration-form -->
+        <div class="registration-form" id="registration-form">
+            <img class="ellipse" src="donorpage-images/Ellipse 11.svg" alt="" height="25px" width="56px" >
+            <h1 class="donation-heading">Donor Registration</h1>
+            <h3 class="donation-sub-heading">Please fill out the form below and join us in making a positive impact on the lives of those in need.</h3>
+
+            <div class="donation-steps donor-form">
+                <h2 class="steps-heading donor-form-heading">Donor Details</h2>
+
+                <form action="PHP-Files/form.php" method="post">
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                    <input type="text" name="age" id="age" placeholder="Enter your age">
+                    <input type="text" name="gender" id="gender" placeholder="Enter your gender">
+                    <input type="text" name="phone_num" id="phone_num" placeholder="Enter your phone number">
+                    <input type="text" name="email" id="email" placeholder="Enter your email">
+                    <input type="text" name="state" id="state" placeholder="Enter your state">
+                    <input type="text" name="city" id="city" placeholder="Enter your city">
+                    <input type="text" name="blood_group" id="blood_group" placeholder="Enter your blood group">
+                    <textarea name="additional_info" id="additional_info" cols="20" rows="10" placeholder="Please share any additional medical history or information."></textarea>
+                    <button class="btn">Submit</button>
+                
+                </form>
+            </div>
+
+
+
+
+        </div>
+
+        <!-- stories and feedback corner -->
+        <div class="story-feedback-section" id="story-feedback-section">
+            <img class="ellipse shift-top" src="donorpage-images/Ellipse 11.svg" alt="" height="25px" width="56px" >
+            <h1 class="donation-heading">Donor Stories & Feedback Corner</h1>
+
+            <div class="feedback-cards">
+                <!-- card-1 -->
+                <h2 class=" feedback-card1 steps-heading donor-form-heading">Have you recently donated? We'd love to hear about your experience. Please share!</h2>
+                <textarea name="story" id="story" cols="2" rows="2" placeholder=" We value your experiences!"></textarea>
+                <br>
+                <br>
+                <!-- card 2 -->
+                <h2 class=" feedback-card1 steps-heading donor-form-heading">Share your thoughts on our website and blood donation process.</h2>
+                <textarea name="feedback" id="feedback" cols="2" rows="2" placeholder=" We value your experiences!"></textarea>
+
+            </div>
+
+            <div class=" shift-down donation-btn">
+                <div class="donate-btn hoverText">Donate Now</div>
+              </div>
+           
+        </div>
+    </div>
+</body>
+</html>
